@@ -593,7 +593,7 @@ class _FormularioOrdenScreenState extends State<FormularioOrdenScreen> {
         subtitle: Text(
           value != null
               ? DateFormat('dd/MM/yyyy').format(value)
-              : 'No selected',
+              : 'No seleccionada',
         ),
         trailing: const Icon(Icons.calendar_today),
         onTap: () async {
@@ -602,6 +602,9 @@ class _FormularioOrdenScreenState extends State<FormularioOrdenScreen> {
             initialDate: value ?? DateTime.now(),
             firstDate: DateTime(2020),
             lastDate: DateTime(2030),
+            cancelText: 'Cancelar',
+            confirmText: 'Aceptar',
+            locale: const Locale('es', 'CL'),
           );
           onChanged(date);
         },

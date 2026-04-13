@@ -385,6 +385,9 @@ class _OrdenesScreenState extends State<OrdenesScreen> {
               : DateTime.now(),
           firstDate: DateTime(2020),
           lastDate: DateTime(2030),
+          cancelText: 'Cancelar',
+          confirmText: 'Aceptar',
+          locale: const Locale('es', 'CL'),
         );
         if (date != null) {
           onChanged(date.toIso8601String().split('T')[0]);

@@ -81,12 +81,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Órdenes de Servicio',
-                  style: TextStyle(fontSize: 16, color: Colors.white70),
-                  textAlign: TextAlign.center,
-                ),
                 const SizedBox(height: 40),
                 Container(
                   padding: const EdgeInsets.all(24),

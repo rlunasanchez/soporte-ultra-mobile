@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
 import 'providers/auth_provider.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 
 void main() {
+  Intl.defaultLocale = 'es_CL';
   runApp(const SoporteUltraApp());
 }
 
@@ -18,6 +21,17 @@ class SoporteUltraApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Carga de OS',
         debugShowCheckedModeBanner: false,
+        locale: const Locale('es', 'CL'),
+        supportedLocales: const [
+          Locale('es', 'CL'),
+          Locale('es', 'ES'),
+          Locale('es', 'MX'),
+        ],
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
         theme: ThemeData(
           primarySwatch: Colors.blue,
           colorScheme: ColorScheme.fromSeed(

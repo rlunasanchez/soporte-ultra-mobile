@@ -112,6 +112,9 @@ class _RetirosScreenState extends State<RetirosScreen> {
                       initialDate: fechaRetiro,
                       firstDate: DateTime(2020),
                       lastDate: DateTime.now(),
+                      cancelText: 'Cancelar',
+                      confirmText: 'Aceptar',
+                      locale: const Locale('es', 'CL'),
                     );
                     if (date != null) {
                       setDialogState(() => fechaRetiro = date);
@@ -336,6 +339,9 @@ class _RetirosScreenState extends State<RetirosScreen> {
                       initialDate: fechaRetiro,
                       firstDate: DateTime(2020),
                       lastDate: DateTime.now(),
+                      cancelText: 'Cancelar',
+                      confirmText: 'Aceptar',
+                      locale: const Locale('es', 'CL'),
                     );
                     if (date != null) {
                       setDialogState(() => fechaRetiro = date);

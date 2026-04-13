@@ -11,7 +11,7 @@ class AuthProvider extends ChangeNotifier {
 
   DateTime? _lastActivity;
 
-  static const Duration _timeoutDuration = Duration(minutes: 2);
+  static const Duration _timeoutDuration = Duration(minutes: 10);
 
   bool get isLoggedIn => _isLoggedIn;
   String get usuario => _usuario;
