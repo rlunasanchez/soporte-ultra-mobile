@@ -84,10 +84,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (result['success'] && mounted) {
         setState(() => _codigoEnviado = true);
+        String mensaje = result['data']['mensaje'] ?? result['mensaje'] ?? 'Código enviado a tu email';
+        if (result['data']['codigo'] != null) {
+          mensaje += '\nCódigo: ${result['data']['codigo']}';
+        }
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(result['data']['mensaje'] ?? 'Código enviado a tu email'),
+            content: Text(mensaje),
             backgroundColor: Colors.green,
+            duration: const Duration(seconds: 10),
           ),
         );
       } else if (mounted) {
